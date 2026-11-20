@@ -161,6 +161,22 @@ In \cref{fig:autocorrelazione} sono confrontati i due andamenti della funzione d
 \end{figure}
 \FloatBarrier
 
+Per calcolare il tempo di autocorrelazione $\tau_c$ si è scelto di effettuare un fit lineare dei dati in scala logaritmica \cref{fig:autocorrelazione_fit} su dei range opportuni, ottenendo i seguenti valori:
+\begin{itemize}
+    \item $\tau_c^{\text{flip}} = (5.562 \pm 0.007) sweeps$ per la dinamica a singolo tentativo di spin-flip
+    \item $\tau_c^{\text{sweep}} = (1.67 \pm 0.08) sweeps$ per la dinamica a sweep completo dell'intero reticolo
+\end{itemize}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{punto5_autocorrelazione_fit.pdf}
+    \caption{Funzione di autocorrelazione normalizzata dell'energia $C_c(\tau)$ a temperatura $T = 2$ (in unità interne $J = k_B = 1$) in scala logaritmica, mediata su $N_{\text{seed}} = 10$ simulazioni indipendenti. Si confrontano la dinamica a singolo tentativo di spin-flip (blu) e quella a sweep completo dell'intero reticolo (rosso). Le linee tratteggiate rappresentano i fit lineari dei dati eseguiti rispettivamente nei range $[0, 14]$ (blu) e $[0, 8]$ (rosso).}
+    \label{fig:autocorrelazione_fit}
+\end{figure}
+\FloatBarrier
+
+Si nota come la dinamica a sweep completo porti ad un tempo di autocorrelazione più breve, in quanto gli spin vengono flippati con ordine sequenziale e non casuale come nel caso della dinamica a singolo tentativo di spin-flip.
+
 \section*{Codice}
 Il codice sorgente utilizzato per eseguire le simulazioni Monte Carlo e produrre i grafici riportati in questa relazione è disponibile su GitHub al seguente indirizzo:
 \begin{center}
